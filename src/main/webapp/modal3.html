@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>进度条</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div class="ui container">
+            <div class="ui modal first">
+                <div class="header title">确定删除吗？</div>
+                <div class="content">
+                    删除类型的同时会删除相关的所有文章，确定删除码？
+                </div>
+                <div class="actions">
+                    <button class="ui negative button">否</button>
+                    <button class="ui positive button">是</button>
+                </div>
+            </div>
+        </div>
+        <div class="ui modal second">
+            <div class="ui header title">正在删除</div>
+            <div class="ui progress"> <!--此处直接使用 data-percent="32"没有效果-->
+                <div class="bar"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            //通过JavaScript设置进度值
+            $(".ui.progress").progress({
+                percent: 70
+            });
+        </script>
+        <script>
+            $(".first").modal({
+                blurring: true,
+                inverted: true
+            }).modal("show");
+            $(".second").modal(
+                "attach events",
+                ".first .positive.button",
+                "show"
+            );
+        </script>
+    </body>
+</html>

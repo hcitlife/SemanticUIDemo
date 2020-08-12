@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表单</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div class="ui container">
+            <form action="" class="ui form">
+                <div class="field">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="field required">
+                    <label for="nickname">昵称</label>
+                    <input type="text" id="nickname">
+                </div>
+                <div class="inline field">
+                    <label for="tel">电话</label>
+                    <input type="text" id="tel">
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label for="email1">公司邮箱</label>
+                        <input type="text" id="email1">
+                    </div>
+                    <div class="disabled field">
+                        <label for="email2">个人邮箱(禁用)</label>
+                        <input type="text" disabled id="email2">
+                    </div>
+                </div>
+                <div class="fields">
+                    <div class="field six wide">
+                        <label for="birth">生日</label>
+                        <input type="text" id="birth">
+                    </div>
+                    <div class="field ten wide">
+                        <label for="age">年龄(只读)</label>
+                        <input readonly type="text" id="age" value="18">
+                    </div>
+                </div>
+
+
+                <div class="fields">
+                    <div class="field">
+                        <label for="country">国家</label>
+                        <select multiple name="country" id="country" class="ui dropdown">
+                            <option value="">请选择国家</option>
+                            <option value="CN">中国</option>
+                            <option value="US">美国</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="language">国家</label>
+                        <div id="language" class="ui  selection multiple search dropdown">
+                            <input type="hidden" name="lang">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">请选择语言</div>
+                            <div class="menu">
+                                <div class="item" data-value="2">JavaScript</div>
+                                <div class="item" data-value="1">Java</div>
+                                <div class="item" data-value="2">Python</div>
+                                <div class="item" data-value="2">Cshap</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="inline fields">
+                    <label for="payment">支付方式：</label>
+                    <div class="field" id="payment">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="payment" id="alpay">
+                            <label for="alpay">支付宝</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="payment" id="wechat">
+                            <label for="wechat">wechat</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inline fields" id="hobby">
+                    <label for="hobby">兴趣爱好：</label>
+                    <div class="field" >
+                        <div class="ui checkbox">
+                            <input type="checkbox" name="hobby" id="swimming">
+                            <label for="swimming">游泳</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui toggle checkbox">
+                            <input type="checkbox" name="hobby" id="run">
+                            <label for="run">跑步</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui slider checkbox">
+                            <input type="checkbox" name="hobby" id="jump">
+                            <label for="jump">跳高</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="ui button">提交</button>
+            </form>
+        </div>
+        <script>
+            $(".ui.dropdown").dropdown();
+            $(".ui.radio.checkbox").checkbox();
+            $(".ui.checkbox").checkbox();
+        </script>
+    </body>
+</html>

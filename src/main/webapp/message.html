@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>信息</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div class="ui message">
+            <div class="header">大家好</div>
+            <p>请大家好好学习，天天向上！</p>
+        </div>
+        <div class="ui compact message">
+            <div class="header">大家好</div>
+            <p>请大家好好学习，天天向上！</p>
+        </div>
+        <div class="ui small message">
+            <div class="header">大家好</div>
+            <p>请大家好好学习，天天向上！</p>
+        </div>
+        <div class="ui massive message">
+            <div class="header">大家好</div>
+            <p>请大家好好学习，天天向上！</p>
+        </div>
+
+        <div class="ui icon message">
+            <i class="info icon"></i>
+            <div class="content">
+                <div class="header">大家好</div>
+                <p>请大家好好学习，天天向上！</p>
+            </div>
+        </div>
+
+        <div class="ui info message">
+            <div class="header">注册邀请</div>
+            <p>VIP信息需要注册登录后才能访问！</p>
+        </div>
+        <div class="ui warning message">
+            <div class="header">登录失败</div>
+            <p>用户名或密码不正确，请重新登录</p>
+        </div>
+        <div class="ui negative message">
+            <div class="header">登录失败</div>
+            <p>用户名或密码不正确，请重新登录</p>
+        </div>
+        <div class="ui success message">
+            <div class="header">邮箱验证</div>
+            <p>由于长时间没有登录，请到注册邮箱进行验证</p>
+        </div>
+        <div class="ui positive message">
+            <i class="close icon"></i>
+            <div class="header">登录成功</div>
+            <p>欢迎您，张三！</p>
+        </div>
+        <script>
+            $(".message .close").click(function () {
+                $(this).closest(".message") //找到离它最近的message
+                .transition("fade");//动画：fly
+            });
+        </script>
+
+        <div class="ui red message">red</div>
+        <div class="ui olive message">olive</div>
+        <div class="ui teal message">teal</div>
+        <div class="ui purple message">purple</div>
+        <div class="ui black message">black</div>
+
+
+    </body>
+</html>

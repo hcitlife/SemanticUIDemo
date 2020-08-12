@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>进度条</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div class="ui container">
+            <div class="ui progress">
+                <div class="bar"></div>
+            </div>
+            <div class="ui tiny progress">
+                <div class="bar"></div>
+                <div class="label">上传文件</div>
+            </div>
+
+            <div class="ui success progress" data-percent="45">
+                <div class="bar"></div>
+            </div>
+
+            <div class="ui progress" id="fileUpload1">
+                <div class="bar"></div>
+            </div>
+            <script type="text/javascript">
+                //通过JavaScript设置进度值
+                $("#fileUpload1").progress({
+                    percent: 70
+                });
+            </script>
+
+            <div class="ui progress" id="fileUpload2">
+                <div class="bar">
+                    <div class="progress"></div> <!-- 如果不想在进度条中显示百分比，去掉这一行 -->
+                </div>
+                <div class="label">文件上传</div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $("#fileUpload2").progress({
+                total: 3, //任务总数
+                text: { //标签
+                    active: '共 {total} 个文件，已经上传 {value} 个',
+                    success: '成功上传 {total} 个文件'
+                }
+            })
+        </script>
+    </body>
+</html>

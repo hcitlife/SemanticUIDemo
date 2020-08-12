@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>选项卡</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    </head>
+    <body>
+        <div class="ui top attached tabular menu">
+            <a href="" class="item" data-tab="yuWen">语文</a>
+            <a href="" class="item active" data-tab="english">英语</a>
+            <a href="" class="item" data-tab="math">数学</a>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="yuWen">语文语文语文</div>
+        <div class="ui bottom attached tab active segment" data-tab="english">英语英语英语</div>
+        <div class="ui bottom attached tab segment" data-tab="math">数学数学数学</div>
+        <script>
+            $(".tabular.menu .item").tab();
+        </script>
+    </body>
+</html>

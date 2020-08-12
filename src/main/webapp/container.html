@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>容器</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <!--容器写法-->
+        <!--容器是一个元素，根据用户屏幕的大小将页面元素包含到合理的最大宽度。容器与 grid 或者 menu 一起使用，能将其宽度限制为合理尺寸，保证页面的美观。-->
+       <!-- 标准容器，左右边距适中-->
+       <div class="ui container">
+           <p>
+               HikariCP是由日本程序员开源的一个数据库连接池组件，代码非常轻量，并且速度非常的快。根据官方提供的数据，在i7,开启32个线程32个连接的情况下，进行随机数据库读写操作，HikariCP的速度是现在常用的C3P0数据库连接池的数百倍。
+           </p>
+       </div>
+        <!--
+        文本容器：使用一个单独的网格列，其设计具有合理的最大宽度，用于显示流文本。突显要显示的文字，左右边距很大，其中文字很大
+        可以通过类样式 left aligned/ center aligned/ right aligned/ justified指定文本对齐方式
+        -->
+        <div class="ui text container">
+            <p>
+                HikariCP是由日本程序员开源的一个数据库连接池组件，代码非常轻量，并且速度非常的快。根据官方提供的数据，在i7,开启32个线程32个连接的情况下，进行随机数据库读写操作，HikariCP的速度是现在常用的C3P0数据库连接池的数百倍。
+            </p>
+        </div>
+        <!--流式容器：没有最大宽度的限制，其中文字宽度占满整个屏幕。流式容器对于设置文本对齐，或其他样式很有用-->
+        <div class="ui fluid container">
+            <p>
+                HikariCP是由日本程序员开源的一个数据库连接池组件，代码非常轻量，并且速度非常的快。根据官方提供的数据，在i7,开启32个线程32个连接的情况下，进行随机数据库读写操作，HikariCP的速度是现在常用的C3P0数据库连接池的数百倍。
+            </p>
+        </div>
+
+        <br>
+        <br>
+        <!--容器的对齐方式-->
+        <!--居中-->
+        <div class="ui center aligned container">
+            <p>
+                HikariCP是由日本程序员开源的一个数据库连接池组件，代码非常轻量，并且速度非常的快。根据官方提供的数据，在i7,开启32个线程32个连接的情况下，进行随机数据库读写操作，HikariCP的速度是现在常用的C3P0数据库连接池的数百倍。
+            </p>
+        </div>
+        <!--居左-->
+        <div class="ui left aligned container">
+            <p>
+                HikariCP是由日本程序员开源的一个数据库连接池组件，代码非常轻量，并且速度非常的快。根据官方提供的数据，在i7,开启32个线程32个连接的情况下，进行随机数据库读写操作，HikariCP的速度是现在常用的C3P0数据库连接池的数百倍。
+            </p>
+        </div>
+        <!--居右-->
+        <div class="ui right aligned container">
+            <p>
+                HikariCP是由日本程序员开源的一个数据库连接池组件，代码非常轻量，并且速度非常的快。根据官方提供的数据，在i7,开启32个线程32个连接的情况下，进行随机数据库读写操作，HikariCP的速度是现在常用的C3P0数据库连接池的数百倍。
+            </p>
+        </div>
+    </body>
+</html>

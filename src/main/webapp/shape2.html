@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Shape</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div class="ui container">
+            <div class="ui shape">
+                <div class="sides">
+                    <div class="active first side">
+                        <img src="imgs/android.png" class="ui medium image">
+                    </div>
+                    <div class="second side">
+                        <img src="imgs/cpp.png" class="ui medium image">
+                    </div>
+                    <div class="third side">
+                        <img src="imgs/dotnet.png" class="ui medium image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui divider"></div>
+            <div class="ui type buttons">
+                <div class="active ui button" data-shape="auto">Auto</div>
+                <div class="ui button" data-shape="square">方形</div>
+                <div class="ui button" data-shape="irregular">不规则</div>
+            </div>
+
+            <div class="ui divider"></div>
+            <div class="ui ignored icon direction buttons">
+                <div class="ui button" data-animation="flip" title="Flip Left" data-direction="left">
+                    <i class="left long arrow icon"></i>
+                </div>
+                <div class="ui button" data-animation="flip" title="Flip Up" data-direction="up">
+                    <i class="up long arrow icon"></i>
+                </div>
+                <div class="ui icon button" data-animation="flip" title="Flip Down" data-direction="down">
+                    <i class="down long arrow icon"></i>
+                </div>
+                <div class="ui icon button" data-animation="flip" title="Flip Right" data-direction="right">
+                    <i class="right long arrow icon"></i>
+                </div>
+            </div>
+            <div class="ui ignored icon direction buttons">
+                <div class="ui button" title="Flip Over" data-animation="flip" data-direction="over">
+                    <i class="retweet icon"></i>
+                </div>
+                <div class="ui button" title="Flip Back" data-animation="flip" data-direction="back">
+                    <i class="flipped retweet icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                let $demo = $('.ui.shape');
+
+                function rotate() {
+                    let $shape = $('.ui.shape');
+                    let direction = $(this).data('direction') || false;
+                    let animation = $(this).data('animation') || false;
+                    if (direction && animation) {
+                        $shape.shape(animation + '.' + direction);
+                    }
+                }
+
+                //更改当前的形状
+                function changeShape() {
+                    let $shape = $(this);
+                    let $otherShapes = $shape.siblings();
+                    let shape = $shape.data('shape');
+                    $shape.addClass('active');
+                    $otherShapes.removeClass('active').each(removeShape);
+                    $demo.removeAttr('style').addClass(shape2);
+                }
+
+                //移除shape
+                function removeShape() {
+                    let shape = $(this).data('shape') || false;
+                    if (shape2) {
+                        $demo.removeClass(shape2);
+                    }
+                }
+
+                // 绑定事件处理函数
+                $demo.shape();
+
+                let $directionButton = $('.direction.buttons .button');
+                $directionButton.on('click', rotate).popup({
+                    delay: 0,
+                    position: 'bottom center'
+                });
+
+                let $shapeButton = $('.type.buttons .button');
+                $shapeButton.on('click', changeShape);
+            });
+
+        </script>
+    </body>
+</html>

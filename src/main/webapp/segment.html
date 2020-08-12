@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>分段</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <h2>分段的样式</h2>
+        <div class="ui segment">
+            <p>标准分段</p>
+        </div>
+        <div class="ui raised segment">
+            <p>浮雕分段</p>
+        </div>
+        <div class="ui stacked segment">
+            <p>堆叠分段</p>
+        </div>
+        <div class="ui tall stacked segment">
+            <p>堆叠更加突出的分段</p>
+        </div>
+        <div class="ui piled segment">
+            <p>piled分段</p>
+        </div>
+
+        <div class="ui secondary segment">
+            <p>次要分段</p>
+        </div>
+
+        <div class="ui tertiary segment">
+            <p>更加次要的分段</p>
+        </div>
+
+        <div class="ui red segment">
+            <p>带颜色的分段</p>
+        </div>
+
+        <div class="ui inverted red segment">
+            <p>反转的带颜色的分段</p>
+        </div>
+
+        <div class="ui inverted red secondary segment">
+            <p>反转的带颜色的次要的分段</p>
+        </div>
+        <div class="ui inverted red tertiary segment">
+            <p>反转的带颜色的更次要的分段</p>
+        </div>
+
+        <div class="ui right aligned segment">右对齐</div>
+        <div class="ui center aligned segment">居中对齐</div>
+        <div class="ui left aligned segment">左对齐</div>
+
+        <br>
+        <h2>分段的组合</h2>
+        <!--一个分段中包含多个分段-->
+        <div class="ui segments">
+            <div class="ui segment">
+                <p>分段1</p>
+            </div>
+            <div class="ui secondary segment">
+                <p>分段2</p>
+            </div>
+            <div class="ui segment">
+                <p>分段3</p>
+            </div>
+        </div>
+        <!--将分段作为占位预显示-->
+        <div class="ui placeholder segment">
+            <div class="ui icon header">
+                <i class="word file outline icon"></i>
+                没有文件
+            </div>
+            <ui class="ui primary button">添加</ui>
+        </div>
+
+        <!--加载样式分段-->
+        <div class="ui loading segment">
+            <p>加载样式分段</p>
+        </div>
+
+        <!--禁用样式分段-->
+        <div class="ui disabled segment">
+            <p>禁用样式分段</p>
+        </div>
+        <!--圆形分段：如果要正圆显示需要指定相等的长宽值-->
+        <div class="ui circular segment" style="width: 150px;height: 150px;">
+            <h2 class="ui head">促销</h2>
+            <div class="ui sub header">9.9元</div>
+        </div>
+    </body>
+</html>

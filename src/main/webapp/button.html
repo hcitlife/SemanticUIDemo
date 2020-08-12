@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>按钮</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <h2>按钮的样式</h2>
+        <button class="ui button">标准按钮</button>
+        <!--除了<button>标签外，<div>标签也可以创建按钮-->
+        <div class="ui button">标准按钮</div>
+        <br>
+        <br>
+
+        <button class="ui compact button">紧凑按钮</button>
+        <button class="ui basic button">基础按钮</button>
+        <button class="ui basic button">
+            <i class="user icon"></i>个人信息
+        </button>
+        <br>
+        <br>
+
+        <!--优先级按钮-->
+        <button class="ui primary button">主要</button>
+        <button class="ui secondary button">次要</button>
+        <br>
+        <br>
+
+        <button class="ui positive button">积极</button>
+        <button class="ui negative">消极</button>
+        <br>
+        <br>
+
+        <!--表示状态的按钮-->
+        <button class="ui active button">激活状态</button>
+        <button class="ui disabled button">禁用状态</button>
+        <button class="ui teal huge loading button">加载状态</button>
+        <br>
+        <br>
+
+        <!--表示状态切换的按钮-->
+        <button class="ui toggle button">正常</button>
+        <br>
+        <br>
+
+        <!--社交 (Social)-->
+        <button class="ui facebook button">
+            <i class="facebook icon"></i>
+            Facebook
+        </button>
+        <button class="ui twitter button">
+            <i class="twitter icon"></i>
+            Twitter
+        </button>
+        <button class="ui linkedin button">
+            <i class="linkedin icon"></i>
+            LinkedIn
+        </button>
+        <button class="ui instagram button">
+            <i class="instagram icon"></i>
+            Instagram
+        </button>
+        <button class="ui youtube button">
+            <i class="youtube icon"></i>
+            YouTube
+        </button>
+        <button class="ui google button">
+            <i class="google icon"></i>
+            Google
+        </button>
+        <button class="ui google plus button">
+            <i class="google plus icon"></i>
+            Google Plus
+        </button>
+        <br>
+        <br>
+
+        <button class="ui right floated button">右浮</button>
+        <button class="ui left floated button">左浮</button>
+        <button class="ui fluid button">满行</button>
+        <br>
+        <br>
+
+
+        <!--带图标的按钮-->
+        <button class="ui icon button">
+            <i class="cloud icon"></i>百度云
+        </button>
+        <!--圆形按钮-->
+        <button class="ui circular icon button">
+            <i class="pause icon"></i>暂停
+        </button>
+        <button class="ui circular icon teal button">
+            <i class="setting icon"></i>
+        </button>
+        <br>
+        <br>
+
+        <!--带标签的按钮-->
+        <div class="ui labeled button">
+            <div class="ui button">
+                <i class="heart icon"></i>真爱
+            </div>
+            <a href="#" class="ui basic label">321</a>
+        </div>
+        <div class="ui left labeled button">
+            <a href="#" class="ui blue right pointing basic label">真爱</a>
+            <div class="ui blue icon button">
+                <i class="fork icon"></i>Forks
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+        <h2>按钮的大小</h2>
+        <button class="ui mini button">最小</button>
+        <button class="ui tiny button">微小</button>
+        <button class="ui small button">很小</button>
+        <button class="ui medium button">中等</button>
+        <button class="ui large button">稍大</button>
+        <button class="ui big button">很大</button>
+        <button class="ui huge button">巨大</button>
+        <button class="ui massive button">最大</button>
+
+        <br>
+        <br>
+        <h2>按钮的颜色</h2>
+        <button class="ui red button">红色</button>
+        <button class="ui orange button">橘色</button>
+        <button class="ui yellow button">黄色</button>
+        <button class="ui olive button">橄榄绿</button>
+        <button class="ui green button">绿色</button>
+        <button class="ui teal button">水鸭蓝</button>
+        <button class="ui blue button">蓝色</button>
+        <button class="ui violet button">紫罗兰</button>
+        <button class="ui purple button">紫色</button>
+        <button class="ui pink button">粉色</button>
+        <button class="ui brown button">棕色</button>
+        <button class="ui grey button">灰色</button>
+        <button class="ui black button">黑色</button>
+        <br>
+        <br>
+
+
+        <!--反转色按钮-->
+        <div class="ui inverted segment">
+            <button class="ui inverted red button">红色</button>
+            <button class="ui inverted orange button">橘色</button>
+            <button class="ui inverted yellow button">黄色</button>
+            <button class="ui inverted olive button">橄榄绿</button>
+            <button class="ui inverted green button">绿色</button>
+            <button class="ui inverted teal button">水鸭蓝</button>
+            <button class="ui inverted blue button">蓝色</button>
+            <button class="ui inverted violet button">紫罗兰</button>
+            <button class="ui inverted purple button">紫色</button>
+            <button class="ui inverted pink button">粉色</button>
+            <button class="ui inverted brown button">棕色</button>
+            <button class="ui inverted grey button">灰色</button>
+            <button class="ui inverted black button">黑色</button>
+        </div>
+        <br>
+        <br>
+
+        <h2>按钮的动画</h2>
+        <!--水平动画-->
+        <div class="ui horizontal animated button">
+            <div class="visible content">下一步</div>
+            <div class="hidden content">
+                <i class="right arrow icon"></i>结账
+            </div>
+        </div>
+        <!--垂直式动画-->
+        <div class="ui vertical animated button">
+            <div class="visible content">购物车</div>
+            <div class="hidden content">
+                <i class="up shop icon"></i>
+            </div>
+        </div>
+        <!--渐近式动画（淡入淡出）-->
+        <div class="ui animated fade button">
+            <div class="visible content">购买</div>
+            <div class="hidden content">
+                &yen;12/年
+            </div>
+        </div>
+        <br>
+        <br>
+
+
+        <H2>按钮的组合:attached紧紧依附在一起</H2>
+        <!--固定在顶部和底部的按钮：按钮附着在内容上下方-->
+        <div class="ui top attached button">顶部按钮</div>
+        <div class="ui attached segment">
+            <p>梁云亮好</p>
+        </div>
+        <div class="ui bottom attached button">底部按钮</div>
+        <br>
+        <div class="ui two top attached buttons">
+            <div class="ui button">左上角</div>
+            <div class="ui button">右上角</div>
+        </div>
+        <div class="ui attached segment">
+            <p>这是一个段落。</p>
+        </div>
+        <div class="ui three bottom attached buttons">
+            <div class="ui button">左下角</div>
+            <div class="ui button">底部正中</div>
+            <div class="ui button">右下角</div>
+        </div>
+        <br>
+
+        <!--按钮左右依附在一起：若没有attached会分开-->
+        <div class="ui left attached button">左边</div>
+        <div class="ui right attached button">右边</div>
+        <br>
+        <br>
+
+        <!--按钮分组：可以为组设置统一的颜色、大小、是否空心等等-->
+        <div class="ui labeled buttons">
+            <button class="ui button active">添加</button>
+            <button class="ui button">修改</button>
+        </div>
+        <br>
+        <div class="ui vertical buttons">
+            <button class="ui button">修改</button>
+            <button class="ui button">删除</button>
+            <button class="ui button">增加</button>
+        </div>
+        <br>
+        <div class="ui horizontal buttons">
+            <button class="ui red basic button">修改</button>
+            <button class="ui pink button">删除</button>
+            <button class="ui teal inverted button">增加</button>
+        </div>
+        <br>
+        <br>
+
+        <!--包含条件的按钮-->
+        <div class="ui horizontal buttons">
+            <button class="ui red button">修改</button>
+            <div class="or"></div>
+            <button class="ui teal button">增加</button>
+        </div>
+        <div class="ui buttons">
+            <button class="ui button">注册</button>
+            <div class="or" data-text="或"></div>
+            <button class="ui positive button">登录</button>
+        </div>
+        <br>
+        <br>
+
+
+        <div class="ui icon buttons">
+            <button class="ui button">
+                <i class="play icon"></i>
+            </button>
+            <button class="ui button">
+                <i class="pause icon"></i>
+            </button>
+            <button class="ui button">
+                <i class="shuffle icon"></i>
+            </button>
+        </div>
+        <div class="ui labeled icon buttons">
+            <button class="ui button">
+                <i class="play icon"></i> 播放
+            </button>
+            <button class="ui button">
+                <i class="pause icon"></i> 暂停
+            </button>
+            <button class="ui button">
+                <i class="shuffle icon"></i> 随机
+            </button>
+        </div>
+        <br>
+        <br>
+
+        <div class="ui icon buttons">
+            <button class="ui button">
+                <i class="align left icon"></i>
+            </button>
+            <button class="ui button">
+                <i class="align center icon"></i>
+            </button>
+            <button class="ui button">
+                <i class="align right icon"></i>
+            </button>
+            <button class="ui button">
+                <i class="align justify icon"></i>
+            </button>
+        </div>
+        <div class="ui icon buttons">
+            <button class="ui button">
+                <i class="bold icon"></i>
+            </button>
+            <button class="ui button">
+                <i class="underline icon"></i>
+            </button>
+            <button class="ui button">
+                <i class="text width icon"></i>
+            </button>
+        </div>
+        <br>
+        <br>
+
+        <!--混合类型分组-->
+        <div class="ui buttons">
+            <button class="ui labeled icon button">
+                <i class="left chevron icon"></i> 前一首
+            </button>
+            <button class="ui button">
+                <i class="stop icon"></i> 停止
+            </button>
+            <button class="ui right labeled icon button">
+                后一首 <i class="right chevron icon"></i>
+            </button>
+        </div>
+        <br>
+        <br>
+
+
+        <!--成员等宽分组-->
+        <div class="five ui buttons">
+            <button class="ui button">One</button>
+            <button class="ui button">Two</button>
+            <button class="ui button">Three</button>
+            <button class="ui button">Four</button>
+            <button class="ui button">Five</button>
+        </div>
+        <br>
+        <br>
+
+        <!--文件操作的分组-->
+        <div class="ui small basic icon buttons">
+            <button class="ui button"><i class="file icon"></i></button>
+            <button class="ui button"><i class="save icon"></i></button>
+            <button class="ui button"><i class="upload icon"></i></button>
+            <button class="ui button"><i class="download icon"></i></button>
+        </div>
+        <br>
+        <br>
+
+    </body>
+</html>

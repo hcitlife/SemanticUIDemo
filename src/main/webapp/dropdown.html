@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>下拉菜单</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <H2>最简单的下拉菜单：不需要JavaScript就可下拉</H2>
+        <div class="ui simple dropdown">
+            课程
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">语文</div>
+                <div class="item">英语</div>
+                <div class="item">数学</div>
+            </div>
+        </div>
+        <h2>普通下拉菜单</h2>
+        <div class="ui dropdown">
+            课程 <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">语文</div>
+                <div class="item">英语</div>
+                <div class="item">数学</div>
+            </div>
+        </div>
+
+        <h2>可以选择的下拉菜单</h2>
+        <div class="ui selection dropdown">
+            <div class="default text">课程</div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">语文</div>
+                <div class="item">英语</div>
+                <div class="item">数学</div>
+            </div>
+        </div>
+
+        <h2>其它下拉菜单</h2>
+        <div class="ui floating selection dropdown">
+            课程 <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">语文</div>
+                <div class="item">英语</div>
+                <div class="item">数学</div>
+            </div>
+        </div>
+        <div class="ui pointing selection dropdown">
+            课程 <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">语文</div>
+                <div class="item">英语</div>
+                <div class="item">数学</div>
+            </div>
+        </div>
+        <div class="ui left pointing selection dropdown">
+            课程 <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">语文</div>
+                <div class="item">英语</div>
+                <div class="item">数学</div>
+            </div>
+        </div>
+
+        <h2>可以选择的文本框下拉菜单：下拉菜单自动设置隐藏域的值</h2>
+        <div class="ui selection dropdown">
+            <input type="hidden" name="course">
+            <div class="default text">课程</div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item" data-value="11">语文</div>
+                <div class="item" data-value="22">英语</div>
+                <div class="item" data-value="33">数学</div>
+            </div>
+        </div>
+        <h2>可以搜索的下拉菜单</h2>
+        <div class="ui search selection dropdown">
+            <div class="default text">课程</div>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item">Java</div>
+                <div class="item">JavaScript</div>
+                <div class="item">Python</div>
+            </div>
+        </div>
+        <h2>带标签的图标按钮下拉菜单</h2>
+        <div class="ui dropdown labeled icon button">
+            <i class="dropdown icon"></i>
+            <div class="text">课程</div>
+            <div class="menu">
+                <div class="item">Java</div>
+                <div class="item">JavaScript</div>
+                <div class="item">Python</div>
+            </div>
+        </div>
+
+        <h2>带标签的图标按钮、可查询的下拉菜单</h2>
+        <div class="ui dropdown labeled icon button">
+            <i class="dropdown icon"></i>
+            <div class="text">课程</div>
+            <div class="menu">
+                <div class="ui icon search input">
+                    <i class="search icon"></i>
+                    <input type="text" placeholder="搜索">
+                </div>
+                <div class="item">Java</div>
+                <div class="item">JavaScript</div>
+                <div class="item">Python</div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <script type="text/javascript">
+            $(".ui.dropdown").dropdown({
+                on:'hover' ,//鼠标悬浮显示，默认值是click
+                transition:'swing right', //设置动画效果
+                allowAdditions:true //允许添加新的菜单项
+            });
+        </script>
+    </body>
+</html>

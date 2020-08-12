@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>按钮</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div class="ui tiny thin sidebar inverted vertical menu">
+            <div class="item">
+                <h4 class="ui blue header">XXXX管理系统</h4>
+            </div>
+            <div class="ui inverted transparent icon input">
+                <i class="search icon"></i>
+                <input type="text" placeholder="搜索……">
+            </div>
+            <div class="item">
+                <div class="menu">
+                    <a href="#" class="item">用户管理</a>
+                    <a href="#" class="item">博客管理</a>
+                    <a href="#" class="item">好友管理</a>
+                    <a href="#" class="item">类别管理</a>
+                </div>
+            </div>
+            <div class="item">个人信息</div>
+        </div>
+        <div class="ui labeled icon button">
+            <i class="sidebar icon"></i>菜单
+        </div>
+        <img src="imgs/lyl.jpg" alt="" class="ui image">
+        <script>
+            $(".ui.button").click(function () {
+                $(".ui.sidebar")
+                    .sidebar({
+                        transition:'slide out' //默认uncover，可以取值push\overlay\slide along\slide out\scale down
+                    })
+                    .sidebar("toggle");
+            });
+        </script>
+    </body>
+</html>

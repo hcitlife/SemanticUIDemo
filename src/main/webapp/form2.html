@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表单的状态</title>
+        <link rel="stylesheet" href="semantic-ui/semantic/dist/semantic.min.css">
+        <script type="text/javascript" src="js/jquery3.3.1.js"></script>
+        <script type="text/javascript" src="semantic-ui/semantic/dist/semantic.min.js"></script>
+    </head>
+    <body>
+        <div class="ui container">
+            <form action="" class="ui form">
+                <div class="field">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name">
+                </div>
+               <div class="ui error message">
+                   <div class="header">错误：</div>
+                   <p>后台代码出现错误</p>
+               </div>
+                <div class="ui warning message">
+                    <div class="header">警告：</div>
+                    <p>服务器内在资源不足</p>
+                </div>
+                <div class="ui success message">
+                    <div class="header">成功：</div>
+                    <p>代码调试成功</p>
+                </div>
+            </form>
+            <button id="btn1">正在提交</button>
+            <button id="btn2">成功</button>
+        </div>
+        <script>
+            $("#btn1").click(function () {
+                $("form").addClass("loading");
+            });
+            $("#btn2").click(function () {
+                $("form").addClass("success");
+            });
+        </script>
+    </body>
+</html>
